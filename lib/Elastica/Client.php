@@ -408,7 +408,7 @@ class Client
             }
         }
 
-        if (!isset($options['retry_on_conflict'])) {
+        if (isset($options['retry_on_conflict'])) {
             $retryOnConflict = $this->getConfig('retryOnConflict');
             $options['retry_on_conflict'] = $retryOnConflict;
         }
